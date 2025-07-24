@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.quoteBox {
+  background-color: #fff;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.text {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.author {
+  font-size: 1em;
+  text-align: right;
+  align-self: flex-end;
+  font-family: 'Indie Flower', cursive;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.newQuote,
+.tweetQuote,
+.tumblrQuote {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+}
+
+.tweetQuote {
+  background-color: #3B5998;
+}
+
+.tumblrQuote {
+  background-color: #35465C;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 10px;
+}
