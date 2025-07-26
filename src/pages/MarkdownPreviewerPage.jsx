@@ -1,10 +1,11 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar"
+import MarkdownPreview from "../components/MarkdownPreview"
 
 export default function MarkdownPreviewerPage() {
     return (
         <>
             <Navbar />
-            <h1>Markdown Previewer</h1>
+            <MarkdownPreview />
         </>
     );
 }
