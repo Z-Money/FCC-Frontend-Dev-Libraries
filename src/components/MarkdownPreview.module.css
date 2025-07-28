@@ -1,14 +1,17 @@
 .markdownPreview {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 80vh;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .editorContainer,
 .previewContainer {
   padding: 20px;
   height: 100%;
-  overflow-y: auto;
+  flex: 1;
 }
 
 .editor {
@@ -17,15 +20,24 @@
   resize: none;
   font-size: 1.2em;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
+  border-radius: 10px;
   min-height: 200px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-family: monospace;
 }
 
 .preview {
   width: 100%;
   height: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .markdown h1 {
@@ -55,16 +67,17 @@
 
 .markdown a {
   text-decoration: underline;
+  color: #337ab7;
 }
 
 .markdown code {
-  background-color: #f5f5f5;
+  background-color: #fafafa;
   padding: 2px 4px;
   border-radius: 4px;
 }
 
 .markdown pre {
-  background-color: #f5f5f5;
+  background-color: #fafafa;
   padding: 10px;
   border-radius: 4px;
 }
@@ -78,9 +91,21 @@
 .markdown td {
   border: 1px solid #333;
   padding: 8px;
+  background-color: #fafafa;
 }
 
 .markdown th {
   text-align: left;
+  background-color: #337ab7;
+  color: #fff;
 }
 
+.markdown blockquote {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-left: 4px solid #ccc;
+}
+
+.markdown img {
+  max-width: 100%;
+}

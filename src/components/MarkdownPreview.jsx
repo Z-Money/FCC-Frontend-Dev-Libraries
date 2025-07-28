@@ -1,7 +1,21 @@
 import { useState, useEffect } from 'react'
-import { marked } from 'marked'
-marked.use({ breaks: true })
+import { Marked } from 'marked'
+import { markedHighlight } from 'marked-highlight'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/github.css'
 import styles from './MarkdownPreview.module.css'
+
+const marked = new Marked(
+    markedHighlight({
+        langPrefix: 'hljs language-',
+        highlight(code, lang) {
+            const language = hljs.getLanguage(lang) ? lang : 'javascript'
+            return hljs.highlight(code, { language }).value
+        },
+    })
+)
+
+marked.use({ breaks: true })
 
 export default function MarkdownPreview() {
     const initialMarkdown = `
@@ -25,6 +39,13 @@ function anotherExample(firstLine, lastLine) {
 You can also make text **bold** or _italic_.
 > Here's a blockquote from [Markdown Guide](https://www.markdownguide.org/cheat-sheet/):
 
+You can even have some tables:
+
+Wild Header | Crazy Header | Another Header?
+------------ | ------------- | -------------
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
+
 And here's an ordered list:
 
 1. First item
@@ -47,13 +68,13 @@ And here's a [link](https://www.freecodecamp.com) to a freeCodeCamp website.
 
     useEffect(() => {
         setMarkdown(initialMarkdown)
-        const html = marked(initialMarkdown)
+        const html = marked.parse(initialMarkdown)
         setHtml(html)
     }, [])
 
     const handleChange = (e) => {
         setMarkdown(e.target.value)
-        const html = marked(e.target.value)
+        const html = marked.parse(e.target.value)
         setHtml(html)
     }
 
@@ -68,4 +89,6 @@ And here's a [link](https://www.freecodecamp.com) to a freeCodeCamp website.
         </div>
     )
 }
+
+
 
