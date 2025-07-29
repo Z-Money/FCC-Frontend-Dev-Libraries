@@ -1,10 +1,11 @@
 import Navbar from "../components/Navbar";
+import DrumMachine from "../components/DrumMachine";
 
 export default function DrumMachinePage() {
     return (
         <>
             <Navbar />
-            <h1>Drum Machine</h1>
+            <DrumMachine />
         </>
     );
 }
