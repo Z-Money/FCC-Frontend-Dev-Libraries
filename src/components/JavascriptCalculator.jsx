@@ -3,7 +3,7 @@ import styles from "./JavascriptCalculator.module.css";
 
 export default function JavascriptCalculator() {
     const [answer, setAnswer] = useState("");
-    const [expression, setExpression] = useState("");
+    const [expression, setExpression] = useState("0");
     const et = expression.trim();
 
     const isOperator = (symbol) => {
