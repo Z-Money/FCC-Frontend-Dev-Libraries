@@ -7,7 +7,7 @@ import QuotePage from './pages/RandomQuoteMachinePage'
 import MarkdownPage from './pages/MarkdownPreviewerPage'
 import DrumMachinePage from './pages/DrumMachinePage'
 import ClockPage from './pages/ClockPage'
-import CalculatorPage from './pages/JavascriptCalculatorPage'
+import JavascriptCalculatorPage from './pages/JavascriptCalculatorPage'
 
 import './index.css'
 
@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/markdown" element={<MarkdownPage />} />
         <Route path="/drum-machine" element={<DrumMachinePage />} />
         <Route path="/clock" element={<ClockPage />} />
-        <Route path="/calculator" element={<CalculatorPage />} />
+        <Route path="/calculator" element={<JavascriptCalculatorPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
