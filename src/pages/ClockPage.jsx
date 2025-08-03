@@ -1,10 +1,11 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar"
+import Clock from "../components/Clock"
 
 export default function ClockPage() {
     return (
         <>
             <Navbar />
-            <h1>25 + 5 Clock</h1>
+            <Clock />
         </>
     );
 }

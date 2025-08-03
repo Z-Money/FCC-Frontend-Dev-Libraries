@@ -1,0 +1,75 @@
+.clockContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+.title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.lengthRow {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0px auto 20px;
+}
+
+.lengthSelector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.lengthSelector span {
+    margin: 0 10px;
+}
+
+.lengthSelector span .icons {
+    margin: 0 5px;
+}
+
+.icons {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.button {
+    background: transparent;
+    border: none;
+}
+
+.timerDisplay {
+    font-size: 1.35em;
+    color: #333;
+    text-align: center;
+}
+
+.timer {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.controlButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}

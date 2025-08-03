@@ -25,7 +25,6 @@ export default function JavascriptCalculator() {
         } else if (symbol === ".") {
             const lastNumber = expression.split(/[-+/*]/g).pop();
             if (!lastNumber) return;
-            console.log("lastNumber :>>", lastNumber);
             if (lastNumber?.includes(".")) return;
             setExpression(expression + symbol);
         } else {
