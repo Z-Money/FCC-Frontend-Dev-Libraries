@@ -1,10 +1,11 @@
 import Navbar from '../components/Navbar'
+import IndexContent from '../components/IndexContent'
 
 export default function IndexPage() {
     return (
         <>
             <Navbar />
-            <h1>Index Page</h1>
+            <IndexContent />
         </>
     )
 }
